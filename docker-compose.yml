@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+    minecraft-server:
+        image: arthemismc/spigot
+        container_name: "minecraft-server"
+        restart: always
+        ports:
+            # Minecraft server port
+            - "25565:25565"
+            # Minecraft server console port
+            - "25575:25575"
+        volumes:
+            # Imports required files for Spigot
+            - "./server/world:/server/world/"
+            - "./server/world_nether:/server/world_nether/"
+            - "./server/world_the_end:/server/world_the_end/"
+            - "./server/config.yml:/server/config.yml"
+            - "./server/spigot.yml:/server/spigot.yml"
+            - "./server/server.properties:/server/server.properties"
+            - "./server/bukkit.yml:/server/bukkit.yml"
+            - "./server/banned-ips.json:/server/banned-ips.json"
+            - "./server/banned-players.json:/server/banned-players.json"
+            - "./server/whitelist.json:/server/whitelist.json"
+            - "./server/plugins/:/server/plugins/"
