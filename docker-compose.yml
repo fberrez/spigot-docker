@@ -1,7 +1,7 @@
 version: "3.7"
 services:
     minecraft-server:
-        image: arthemismc/spigot:1.14.4
+        image: arthemismc/spigot:latest
         container_name: "minecraft-server"
         restart: always
         ports:
