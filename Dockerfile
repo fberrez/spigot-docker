@@ -2,7 +2,7 @@ FROM openjdk:8-jre
 
 # Defines env variables
 # REV is the version to build. see: https://www.spigotmc.org/wiki/buildtools/#versions 
-ARG REV=1.13.2
+ARG REV=1.14.4
 
 # Installs git
 RUN apt-get update && \
